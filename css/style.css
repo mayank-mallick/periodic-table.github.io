@@ -1,0 +1,161 @@
+body {
+  background-image: url(/img/bg.jpg);
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row-reverse wrap;
+  align-items: center;
+  width: 40rem;
+  height: 30rem;
+  border: 2px black solid;
+}
+.child {
+  color: white;
+  margin-left: 1rem;
+  border: 2px black solid;
+}
+.green {
+  background-color: lightgreen;
+  order: 1;
+  flex-grow: 8;
+}
+.red {
+  background-color: lightcoral;
+  order: 1;
+  flex-grow: 2;
+}
+.black {
+  background-color: black;
+  flex-grow: 1;
+}
+.box {
+  order: 2;
+}
+
+h1 {
+  color: aliceblue;
+  text-align: center;
+}
+
+table {
+  width: 80vw;
+  height: 70vh;
+  margin: 10vh auto;
+}
+td {
+  text-align: center;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 10%;
+  border: 2px gray solid;
+  color: aliceblue;
+}
+
+td:empty {
+  border: none;
+}
+
+tr {
+  font-size: medium;
+}
+
+#tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+#tooltipText {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #4B0150;
+  color: aliceblue;
+  white-space: nowrap;
+  padding: 10px 15px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+}
+
+#tooltipText::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: rgb(80, 26, 86) #0000 #0000 #0000;
+}
+
+#tooltip:hover #tooltipText {
+  top: -220%;
+  visibility: visible;
+  opacity: 1;
+}
+
+p {
+  font-size: small;
+}
+
+td:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+
+tr:nth-child(1) :nth-child(1) {
+  background-color: rgba(253, 237, 6, 0.5);
+}
+tr:nth-child(n + 2):nth-child(-n + 7) :nth-child(n + 1):nth-child(-n + 1) {
+  background-color: rgba(20, 87, 143, 0.562);
+}
+tr:nth-child(n + 2):nth-child(-n + 7) :nth-child(n + 2):nth-child(-n + 2), :nth-child(7) :nth-child(18) {
+  background-color: rgba(172, 144, 69, 0.514);
+}
+tr:nth-child(2) :nth-child(n + 14):nth-child(-n + 16),
+tr:nth-child(3) :nth-child(n + 15):nth-child(-n + 16),
+tr:nth-child(4) :nth-child(16) {
+  background-color: rgba(253, 237, 6, 0.5);
+}
+tr:nth-child(9) :nth-child(n + 2):nth-child(-n + 15) {
+  background-color: rgba(1, 97, 73, 0.5);
+}
+tr:nth-child(8) :nth-child(n + 2):nth-child(-n + 15) {
+  background-color: rgba(173, 216, 230, 0.658);
+}
+:nth-child(7) :nth-child(3) {
+  background-color: rgba(1, 97, 73, 0.5);
+}
+tr:nth-child(6) :nth-child(3) {
+  background-color: rgba(173, 216, 230, 0.658);
+}
+tr:nth-child(n + 3):nth-child(-n + 7) :nth-child(13),
+:nth-child(n + 5):nth-child(-n + 7) :nth-child(14),
+:nth-child(6) :nth-child(15) {
+  background-color: rgba(241, 119, 137, 0.473);
+}
+tr:nth-child(2) :nth-child(13),
+:nth-child(n + 3):nth-child(-n + 4) :nth-child(14),
+:nth-child(n + 4):nth-child(-n + 5) :nth-child(15),
+:nth-child(n + 5):nth-child(-n + 6) :nth-child(16) {
+  background-color: rgba(231, 99, 47, 0.596);
+}
+tr:nth-child(7) :nth-child(15),
+tr:nth-child(n + 2):nth-child(-n + 6) :nth-child(17) {
+  background-color: rgba(218, 110, 2, 0.473);
+}
+tr:nth-child(7) :nth-child(17) {
+  background-color: rgba(20, 87, 143, 0.562);
+}
+tr:nth-child(7) :nth-child(16),
+tr:nth-child(n + 1):nth-child(-n + 6) :nth-child(18) {
+  background-color: rgba(238, 16, 238, 0.486);
+}
+tr:nth-child(n+4):nth-child(-n+5) :nth-child(n+3):nth-child(-n+12), :nth-child(n+6):nth-child(-n+7) :nth-child(n+4):nth-child(-n+12){
+background-color: rgba(0, 128, 0, 0.616);
+}
